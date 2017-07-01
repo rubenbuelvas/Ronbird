@@ -16,13 +16,13 @@ public class pointsGO : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(beers.points == 1)
+        if(pj.points == 1)
         {
-            pointsTxt.text = "Hiciste " + beers.points.ToString() + " punto";
+            pointsTxt.text = "Hiciste " + pj.points.ToString() + " punto";
         }
         else
         {
-            pointsTxt.text = "Hiciste " + beers.points.ToString() + " puntos";
+            pointsTxt.text = "Hiciste " + pj.points.ToString() + " puntos";
         }
     }
 }

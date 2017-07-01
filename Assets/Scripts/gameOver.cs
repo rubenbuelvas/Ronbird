@@ -4,22 +4,18 @@ using UnityEngine.SceneManagement;
 
 public class gameOver : MonoBehaviour {
 
+
+    public UnityEngine.UI.Text loadingText;
 	// Use this for initialization
 	void Start () {
-	
+        loadingText.enabled = false;
 	}
 	
-    void FixedUpdate()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            SceneManager.LoadScene("MainSc");
-        }
-    }
 	// Update is called once per frame
 	void Update () {
         if (Input.GetMouseButtonDown(0))
         {
+            loadingText.enabled = true;
             SceneManager.LoadScene("MainSc");
         }
     }

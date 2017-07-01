@@ -7,8 +7,10 @@ public class pj : MonoBehaviour
 
     public static bool isAlive = true;
     Rigidbody2D rb;
-    public float upForce = 800;
+    public static bool isPlaying = false;
+    public float upForce = 50;
     public AudioClip deadSound;
+    public static int points = 0;
     bool one = false;
 
     void Awake()
@@ -18,8 +20,10 @@ public class pj : MonoBehaviour
 
 	void Start ()
     {
+        points = 0;
         isAlive = true;
         rb.gravityScale = 0;
+        isPlaying = false;
 	}
 
 	void Update ()
@@ -28,7 +32,9 @@ public class pj : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                isPlaying = true;
                 rb.gravityScale = 1;
+                rb.velocity = Vector2.zero;
                 rb.AddForce(Vector2.up * upForce);
                 GetComponent<AudioSource>().Play();
             }
@@ -51,6 +57,7 @@ public class pj : MonoBehaviour
 
     void chargeScene()
     {
-            SceneManager.LoadScene("GameOver");
+        isPlaying = false;
+        SceneManager.LoadScene("GameOver");
     }
 }

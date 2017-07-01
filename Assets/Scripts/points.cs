@@ -13,6 +13,6 @@ public class points : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        pointsTxt.text = beers.points.ToString();
+        pointsTxt.text = pj.points.ToString();
 	}
 }
