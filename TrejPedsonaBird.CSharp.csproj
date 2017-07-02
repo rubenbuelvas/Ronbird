@@ -63,15 +63,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Intro.cs" />
+    <Compile Include="Assets\Scripts\OptionsButton.cs" />
+    <Compile Include="Assets\Scripts\OptionsController.cs" />
+    <Compile Include="Assets\Scripts\PlayerSelect.cs" />
     <Compile Include="Assets\Scripts\columnControllerR.cs" />
     <Compile Include="Assets\Scripts\gameController.cs" />
     <Compile Include="Assets\Scripts\gameOver.cs" />
     <Compile Include="Assets\Scripts\musicController.cs" />
-    <Compile Include="Assets\Scripts\obsDestroyer.cs" />
     <Compile Include="Assets\Scripts\obsGenerator.cs" />
     <Compile Include="Assets\Scripts\pj.cs" />
     <Compile Include="Assets\Scripts\points.cs" />
     <Compile Include="Assets\Scripts\pointsGO.cs" />
+    <Compile Include="Assets\Scripts\selectOptionWatchdog.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

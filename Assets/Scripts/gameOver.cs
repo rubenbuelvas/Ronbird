@@ -16,7 +16,7 @@ public class gameOver : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             loadingText.enabled = true;
-            SceneManager.LoadScene("MainSc");
+            SceneManager.LoadScene("Game");
         }
     }
 
