@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class OptionsController : MonoBehaviour {
 
     public static int player;
+    public static int music;
     public Text loadingText;
     String url;
 
@@ -21,6 +22,7 @@ public class OptionsController : MonoBehaviour {
     public class OptionsData
     {
         int player;
+        int music;
 
         public void setPlayer(int a)
         {
@@ -30,6 +32,16 @@ public class OptionsController : MonoBehaviour {
        public int getPlayer()
         {
             return this.player;
+        }
+
+        public void setMusic(int a)
+        {
+            this.music = a;
+        }
+
+        public int getMusic()
+        {
+            return this.music;
         }
     }
 
@@ -52,7 +64,8 @@ public class OptionsController : MonoBehaviour {
 
         OptionsData data = new OptionsData();
         data.setPlayer(player);
-       // Debug.Log(player);
+        data.setMusic(music);
+       // Debug.Log(music);
 
         bf.Serialize(file, data);
 

@@ -7,6 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class PlayerSelect : MonoBehaviour
 {
     public GameObject[] players;
+    public static int selectedMusic;
     int selectedPlayer;
 
 
@@ -29,14 +30,18 @@ public class PlayerSelect : MonoBehaviour
             OptionsController.OptionsData data = (OptionsController.OptionsData)bf.Deserialize(file);
 
             selectedPlayer = data.getPlayer();
+            selectedMusic = data.getMusic();
+            //Debug.Log("PS" + selectedMusic);
 
             file.Close();
         }
         else
         {
             selectedPlayer = 0;
+            selectedMusic = 0;
         }
 
+        musicController.selectedMusic = selectedMusic;
         Instantiate(players[selectedPlayer], transform.position, Quaternion.identity);
     }
 	
