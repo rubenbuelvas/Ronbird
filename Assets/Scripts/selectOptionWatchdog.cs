@@ -7,7 +7,7 @@ public class selectOptionWatchdog : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        option = 0;
+        
 	}
 	
 	// Update is called once per frame
@@ -18,9 +18,12 @@ public class selectOptionWatchdog : MonoBehaviour {
 
     void OnMouseDown()
     {
-        if(option == 0 || option == 1)
+        GetComponent<AudioSource>().Play();
+        if(option == 0 || option == 1 || option == 2)
         {
+            //Debug.Log(option);
             OptionsController.player = option;
+            //Debug.Log(OptionsController.player);
         }
         
     }

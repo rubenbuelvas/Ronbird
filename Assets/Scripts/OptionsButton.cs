@@ -11,7 +11,10 @@ public class OptionsButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        if (pj.isPlaying)
+        {
+            Destroy(gameObject);
+        }
 	}
 
     void OnMouseDown()

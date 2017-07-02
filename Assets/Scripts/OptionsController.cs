@@ -4,11 +4,12 @@ using System;
 using UnityEngine.SceneManagement;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using UnityEngine.UI;
 
 public class OptionsController : MonoBehaviour {
 
-    public static  int player;
-    
+    public static int player;
+    public Text loadingText;
     String url;
 
     void Awake()
@@ -35,25 +36,23 @@ public class OptionsController : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-	
+        loadingText.enabled = false;
 	}
 
-    public int yekn = player;
     // Update is called once per frame
-    void Update ()
-    {
-       yekn = player;
-}
+
 
     void OnMouseDown()
     {
-        SceneManager.LoadScene("Options");
+        loadingText.enabled = true;
+        GetComponent<AudioSource>().Play();
 
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(url);
 
         OptionsData data = new OptionsData();
         data.setPlayer(player);
+       // Debug.Log(player);
 
         bf.Serialize(file, data);
 

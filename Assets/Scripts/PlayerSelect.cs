@@ -9,21 +9,6 @@ public class PlayerSelect : MonoBehaviour
     public GameObject[] players;
     int selectedPlayer;
 
-    [Serializable]
-    public class OptionsData
-    {
-        int player;
-
-        public void setPlayer(int a)
-        {
-            this.player = a;
-        }
-
-        public int getPlayer()
-        {
-            return this.player;
-        }
-    }
 
     String url;
 
@@ -36,12 +21,12 @@ public class PlayerSelect : MonoBehaviour
     void Start ()
     {
         //int selectedPlayer;
-        /*if (File.Exists(url))
+        if (File.Exists(url))
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(url, FileMode.Open);
 
-            OptionsData data = (OptionsData)bf.Deserialize(file);
+            OptionsController.OptionsData data = (OptionsController.OptionsData)bf.Deserialize(file);
 
             selectedPlayer = data.getPlayer();
 
@@ -50,9 +35,9 @@ public class PlayerSelect : MonoBehaviour
         else
         {
             selectedPlayer = 0;
-        }*/
+        }
 
-        Instantiate(players[0], transform.position, Quaternion.identity);
+        Instantiate(players[selectedPlayer], transform.position, Quaternion.identity);
     }
 	
 	// Update is called once per frame
