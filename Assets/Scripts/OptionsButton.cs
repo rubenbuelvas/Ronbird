@@ -19,6 +19,7 @@ public class OptionsButton : MonoBehaviour {
 
     void OnMouseDown()
     {
+        GetComponent<AudioSource>().Play();
         pj.isPlaying = false;
         pj.isAlive = false;
         SceneManager.LoadScene("Options");

@@ -10,6 +10,7 @@ public class points : MonoBehaviour {
     public Text pointsTxt;
     public Text maxPointsNumber;
     public Text maxPointsText;
+
     //public static points points_;
     String url;
 
