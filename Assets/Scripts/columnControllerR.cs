@@ -26,7 +26,10 @@ public class columnControllerR : MonoBehaviour {
         if (pj.isAlive)
         {
             pj.points++;
-            GetComponent<AudioSource>().Play();
+            if(musicController.selectedMusic != 1)
+            {
+                GetComponent<AudioSource>().Play();
+            }
         }
     }
 

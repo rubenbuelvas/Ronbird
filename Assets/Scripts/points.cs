@@ -43,6 +43,11 @@ public class points : MonoBehaviour {
             maxPointsNumber.enabled = false;
             maxPointsText.enabled = false;
         }
+
+        if (!pj.isAlive)
+        {
+            pointsTxt.enabled = false;
+        }
 	}
 
     int load()

@@ -9,6 +9,10 @@ public class gameOver : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         loadingText.enabled = false;
+        if(musicController.selectedMusic == 1)
+        {
+            GetComponent<AudioSource>().Stop();
+        }
 	}
 	
 	// Update is called once per frame

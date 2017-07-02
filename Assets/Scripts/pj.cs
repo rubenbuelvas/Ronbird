@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Runtime.Serialization.Formatters.Binary;
 using System;
 using System.IO;
+using UnityEngine.UI;
 
 public class pj : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class pj : MonoBehaviour
     bool one = false;
     public GameObject gameOver;
     String url;
+    //public Text pointsText;
 
     void Awake()
     {
@@ -66,6 +68,7 @@ public class pj : MonoBehaviour
 
     void playDeadSound()
     {
+       // pointsText.enabled = false;
         GetComponent<AudioSource>().PlayOneShot(deadSound, 1);
     }
 

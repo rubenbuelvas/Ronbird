@@ -43,7 +43,7 @@ public class musicController : MonoBehaviour {
                 one = true;
             }
 
-            if (!pj.isAlive)
+            if (!pj.isAlive && musicController.selectedMusic != 1)
             {
                 GetComponent<AudioSource>().Stop();
             }

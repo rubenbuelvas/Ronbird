@@ -71,6 +71,11 @@ public class OptionsController : MonoBehaviour {
 
         file.Close();
 
+        Invoke("restart", 0.5f);
+    }
+
+    void restart()
+    {
         SceneManager.LoadScene("Game");
     }
 
