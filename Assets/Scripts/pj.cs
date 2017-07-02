@@ -15,6 +15,7 @@ public class pj : MonoBehaviour
     public AudioClip deadSound;
     public static int points = 0;
     bool one = false;
+    public GameObject gameOver;
     String url;
 
     void Awake()
@@ -55,9 +56,12 @@ public class pj : MonoBehaviour
         {
             save(points);
         }
-        if(!one)playDeadSound();
-        one = true;
-        Invoke("chargeScene", 1);
+        if (!one)
+        {
+            playDeadSound();
+            if (!one) Invoke("chargeScene", 1);
+            one = true;
+        }
     }
 
     void playDeadSound()
@@ -68,7 +72,7 @@ public class pj : MonoBehaviour
     void chargeScene()
     {
         isPlaying = false;
-        SceneManager.LoadScene("GameOver");
+        Instantiate(gameOver, new Vector3(2, 0, -10), Quaternion.identity);
     }
 
     void save(int p)
