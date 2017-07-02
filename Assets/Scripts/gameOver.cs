@@ -16,8 +16,13 @@ public class gameOver : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             loadingText.enabled = true;
-            SceneManager.LoadScene("Game");
+            Invoke("reloadLevel", 0.5f);
         }
+    }
+
+    void reloadLevel()
+    {
+        SceneManager.LoadScene("Game");
     }
 
 }

@@ -36,8 +36,13 @@ public class points : MonoBehaviour {
             maxPointsText.enabled = false;
         }
         pointsTxt.text = pj.points.ToString();
-        
 
+        if (OptionsButton.isConfig && !one)
+        {
+            one = true;
+            maxPointsNumber.enabled = false;
+            maxPointsText.enabled = false;
+        }
 	}
 
     int load()
