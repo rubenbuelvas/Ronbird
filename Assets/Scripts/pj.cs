@@ -24,6 +24,7 @@ public class pj : MonoBehaviour
     {
         url = Application.persistentDataPath + "/data.dat";
         rb = GetComponent<Rigidbody2D>();
+
     }
 
 	void Start ()
@@ -75,7 +76,7 @@ public class pj : MonoBehaviour
     void chargeScene()
     {
         isPlaying = false;
-        Instantiate(gameOver, new Vector3(2, 0, -10), Quaternion.identity);
+        Instantiate(gameOver, new Vector3(0, 0, -10), Quaternion.identity);
     }
 
     void save(int p)

@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class gameOver : MonoBehaviour {
 
+    public Text points;
+    //public Text text1, text2;
 
-    public UnityEngine.UI.Text loadingText;
+    public Text loadingText;
 	// Use this for initialization
 	void Start () {
         loadingText.enabled = false;
@@ -13,7 +16,8 @@ public class gameOver : MonoBehaviour {
         {
             GetComponent<AudioSource>().Stop();
         }
-	}
+        points.text = pj.points.ToString();
+    }
 	
 	// Update is called once per frame
 	void Update () {
