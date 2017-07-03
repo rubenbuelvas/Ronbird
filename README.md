@@ -1,5 +1,5 @@
 # AyipiBird
 This is AvelBird with more powah
 
-Download the APK: // Available soon //
+Download the APK: https://drive.google.com/drive/folders/0B9KvoAx9HpEXclV6ckg1WDdJTlU
 
