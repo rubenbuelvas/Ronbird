@@ -12,11 +12,12 @@ public class gameOver : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         loadingText.enabled = false;
-        if(musicController.selectedMusic == 1)
+        if(musicController.selectedMusic != 0)
         {
             GetComponent<AudioSource>().Stop();
         }
         points.text = pj.points.ToString();
+
     }
 	
 	// Update is called once per frame
