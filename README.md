@@ -1,5 +1,5 @@
 # RonBird
-## [Download the APK](https://github.com/evilcucaracha/RonBird/releases)
+## [Download the APK](https://github.com/evilcucaracha/RonBird/releases/download/v1.2/ronbird.apk)
 
 ### Songs:
 * La plata - Diomedes Diaz
