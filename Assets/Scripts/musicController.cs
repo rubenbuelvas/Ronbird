@@ -18,7 +18,7 @@ public class musicController : MonoBehaviour {
         one = false;
         //selectedMusic = PlayerSelect.selectedMusic;
         //Invoke("updateMusic", 1f);
-        songPos = rnd.Next(5);
+        songPos = rnd.Next(3);
         selectedMusic = -1;
     }
 	
