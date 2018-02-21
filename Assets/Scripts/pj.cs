@@ -45,7 +45,10 @@ public class pj : MonoBehaviour
                 rb.gravityScale = 1;
                 rb.velocity = Vector2.zero;
                 rb.AddForce(Vector2.up * upForce);
-                GetComponent<AudioSource>().Play();
+                if (musicController.selectedMusic != 2)
+                {
+                    GetComponent<AudioSource>().Play();
+                }
             }
         }
 	}
@@ -69,8 +72,10 @@ public class pj : MonoBehaviour
 
     void playDeadSound()
     {
-       // pointsText.enabled = false;
-        GetComponent<AudioSource>().PlayOneShot(deadSound, 1);
+        if (musicController.selectedMusic != 2)
+        {
+            GetComponent<AudioSource>().PlayOneShot(deadSound, 1);
+        }
     }
 
     void chargeScene()
