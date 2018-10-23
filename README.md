@@ -1,5 +1,4 @@
 # RonBird
-¡Una nueva versión está en camino!
 ## [Descargar la versión actual (Android)](https://github.com/evilcucaracha/RonBird/releases/download/v1.2/ronbird.apk)
 
 ### Canciones:
